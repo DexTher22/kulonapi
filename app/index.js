@@ -3,7 +3,8 @@ import router from './routes.js'
 
 const app = express()
 const PORT = 8000
-app.use('/', router)
+app.use(express.json())
+app.use('/api', router)
 
 app.listen(PORT, () => {
     console.log(`Listen on: ${PORT}`)
